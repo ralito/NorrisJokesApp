@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3911A51215275485002F1F09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A51115275485002F1F09 /* UIKit.framework */; };
+		3911A51415275485002F1F09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A51315275485002F1F09 /* Foundation.framework */; };
+		3911A51615275485002F1F09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A51515275485002F1F09 /* CoreGraphics.framework */; };
+		3911A51C15275485002F1F09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3911A51A15275485002F1F09 /* InfoPlist.strings */; };
+		3911A51E15275485002F1F09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A51D15275485002F1F09 /* main.m */; };
+		3911A52215275485002F1F09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A52115275485002F1F09 /* AppDelegate.m */; };
+		3911A52515275485002F1F09 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3911A52315275485002F1F09 /* MainStoryboard.storyboard */; };
+		3911A52815275485002F1F09 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A52715275485002F1F09 /* FirstViewController.m */; };
+		3911A52F15275485002F1F09 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A52E15275485002F1F09 /* SecondViewController.m */; };
+		3911A53B15275485002F1F09 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A53A15275485002F1F09 /* SenTestingKit.framework */; };
+		3911A53C15275485002F1F09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A51115275485002F1F09 /* UIKit.framework */; };
+		3911A53D15275485002F1F09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A51315275485002F1F09 /* Foundation.framework */; };
+		3911A54515275485002F1F09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3911A54315275485002F1F09 /* InfoPlist.strings */; };
+		3911A54815275485002F1F09 /* NorrisJokesAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A54715275485002F1F09 /* NorrisJokesAppTests.m */; };
+		3911A55515275713002F1F09 /* Top50QuotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A55415275713002F1F09 /* Top50QuotesViewController.m */; };
+		3911A558152758E6002F1F09 /* RecentlyAddedQuotesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A557152758E6002F1F09 /* RecentlyAddedQuotesViewController.m */; };
+		3911A55B15275934002F1F09 /* RandomQuoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A55A15275934002F1F09 /* RandomQuoteViewController.m */; };
+		3911A55E15275A04002F1F09 /* FavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A55D15275A04002F1F09 /* FavouritesViewController.m */; };
+		3911A56115275ACE002F1F09 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A56015275ACE002F1F09 /* SearchViewController.m */; };
+		3911A56C15275F0C002F1F09 /* Quote.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A56615275F0C002F1F09 /* Quote.m */; };
+		3911A56D15275F0C002F1F09 /* QuotesDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A56815275F0C002F1F09 /* QuotesDatabaseService.m */; };
+		3911A57015275FF4002F1F09 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A56F15275FF4002F1F09 /* libsqlite3.0.dylib */; };
+		39F3FAB8152853A600174D6C /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 39F3FAB7152853A600174D6C /* data.sqlite */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3911A53E15275485002F1F09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3911A50415275485002F1F09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3911A50C15275485002F1F09;
+			remoteInfo = NorrisJokesApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3911A50D15275485002F1F09 /* NorrisJokesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NorrisJokesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3911A51115275485002F1F09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3911A51315275485002F1F09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3911A51515275485002F1F09 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3911A51915275485002F1F09 /* NorrisJokesApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NorrisJokesApp-Info.plist"; sourceTree = "<group>"; };
+		3911A51B15275485002F1F09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3911A51D15275485002F1F09 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3911A51F15275485002F1F09 /* NorrisJokesApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NorrisJokesApp-Prefix.pch"; sourceTree = "<group>"; };
+		3911A52015275485002F1F09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3911A52115275485002F1F09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3911A52415275485002F1F09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		3911A52615275485002F1F09 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		3911A52715275485002F1F09 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		3911A52D15275485002F1F09 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		3911A52E15275485002F1F09 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		3911A53915275485002F1F09 /* NorrisJokesAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorrisJokesAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3911A53A15275485002F1F09 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3911A54215275485002F1F09 /* NorrisJokesAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NorrisJokesAppTests-Info.plist"; sourceTree = "<group>"; };
+		3911A54415275485002F1F09 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3911A54615275485002F1F09 /* NorrisJokesAppTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NorrisJokesAppTests.h; sourceTree = "<group>"; };
+		3911A54715275485002F1F09 /* NorrisJokesAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NorrisJokesAppTests.m; sourceTree = "<group>"; };
+		3911A55315275713002F1F09 /* Top50QuotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Top50QuotesViewController.h; sourceTree = "<group>"; };
+		3911A55415275713002F1F09 /* Top50QuotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Top50QuotesViewController.m; sourceTree = "<group>"; };
+		3911A556152758E6002F1F09 /* RecentlyAddedQuotesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecentlyAddedQuotesViewController.h; sourceTree = "<group>"; };
+		3911A557152758E6002F1F09 /* RecentlyAddedQuotesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecentlyAddedQuotesViewController.m; sourceTree = "<group>"; };
+		3911A55915275934002F1F09 /* RandomQuoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomQuoteViewController.h; sourceTree = "<group>"; };
+		3911A55A15275934002F1F09 /* RandomQuoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomQuoteViewController.m; sourceTree = "<group>"; };
+		3911A55C15275A04002F1F09 /* FavouritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesViewController.h; sourceTree = "<group>"; };
+		3911A55D15275A04002F1F09 /* FavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesViewController.m; sourceTree = "<group>"; };
+		3911A55F15275ACD002F1F09 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		3911A56015275ACE002F1F09 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		3911A56515275F0C002F1F09 /* Quote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quote.h; sourceTree = "<group>"; };
+		3911A56615275F0C002F1F09 /* Quote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quote.m; sourceTree = "<group>"; };
+		3911A56715275F0C002F1F09 /* QuotesDatabaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesDatabaseService.h; sourceTree = "<group>"; };
+		3911A56815275F0C002F1F09 /* QuotesDatabaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesDatabaseService.m; sourceTree = "<group>"; };
+		3911A56F15275FF4002F1F09 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		39F3FAB7152853A600174D6C /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3911A50A15275485002F1F09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3911A57015275FF4002F1F09 /* libsqlite3.0.dylib in Frameworks */,
+				3911A51215275485002F1F09 /* UIKit.framework in Frameworks */,
+				3911A51415275485002F1F09 /* Foundation.framework in Frameworks */,
+				3911A51615275485002F1F09 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3911A53515275485002F1F09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3911A53B15275485002F1F09 /* SenTestingKit.framework in Frameworks */,
+				3911A53C15275485002F1F09 /* UIKit.framework in Frameworks */,
+				3911A53D15275485002F1F09 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3911A50215275485002F1F09 = {
+			isa = PBXGroup;
+			children = (
+				3911A56F15275FF4002F1F09 /* libsqlite3.0.dylib */,
+				39F3FAB7152853A600174D6C /* data.sqlite */,
+				3911A51715275485002F1F09 /* NorrisJokesApp */,
+				3911A54015275485002F1F09 /* NorrisJokesAppTests */,
+				3911A51015275485002F1F09 /* Frameworks */,
+				3911A50E15275485002F1F09 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3911A50E15275485002F1F09 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3911A50D15275485002F1F09 /* NorrisJokesApp.app */,
+				3911A53915275485002F1F09 /* NorrisJokesAppTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3911A51015275485002F1F09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3911A51115275485002F1F09 /* UIKit.framework */,
+				3911A51315275485002F1F09 /* Foundation.framework */,
+				3911A51515275485002F1F09 /* CoreGraphics.framework */,
+				3911A53A15275485002F1F09 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3911A51715275485002F1F09 /* NorrisJokesApp */ = {
+			isa = PBXGroup;
+			children = (
+				3911A56215275BDE002F1F09 /* Tabs */,
+				3911A52015275485002F1F09 /* AppDelegate.h */,
+				3911A52115275485002F1F09 /* AppDelegate.m */,
+				3911A52315275485002F1F09 /* MainStoryboard.storyboard */,
+				3911A56515275F0C002F1F09 /* Quote.h */,
+				3911A56615275F0C002F1F09 /* Quote.m */,
+				3911A56715275F0C002F1F09 /* QuotesDatabaseService.h */,
+				3911A56815275F0C002F1F09 /* QuotesDatabaseService.m */,
+				3911A52615275485002F1F09 /* FirstViewController.h */,
+				3911A52715275485002F1F09 /* FirstViewController.m */,
+				3911A52D15275485002F1F09 /* SecondViewController.h */,
+				3911A52E15275485002F1F09 /* SecondViewController.m */,
+				3911A51815275485002F1F09 /* Supporting Files */,
+			);
+			path = NorrisJokesApp;
+			sourceTree = "<group>";
+		};
+		3911A51815275485002F1F09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3911A51915275485002F1F09 /* NorrisJokesApp-Info.plist */,
+				3911A51A15275485002F1F09 /* InfoPlist.strings */,
+				3911A51D15275485002F1F09 /* main.m */,
+				3911A51F15275485002F1F09 /* NorrisJokesApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3911A54015275485002F1F09 /* NorrisJokesAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				3911A54615275485002F1F09 /* NorrisJokesAppTests.h */,
+				3911A54715275485002F1F09 /* NorrisJokesAppTests.m */,
+				3911A54115275485002F1F09 /* Supporting Files */,
+			);
+			path = NorrisJokesAppTests;
+			sourceTree = "<group>";
+		};
+		3911A54115275485002F1F09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3911A54215275485002F1F09 /* NorrisJokesAppTests-Info.plist */,
+				3911A54315275485002F1F09 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3911A56215275BDE002F1F09 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				3911A55F15275ACD002F1F09 /* SearchViewController.h */,
+				3911A56015275ACE002F1F09 /* SearchViewController.m */,
+				3911A55C15275A04002F1F09 /* FavouritesViewController.h */,
+				3911A55D15275A04002F1F09 /* FavouritesViewController.m */,
+				3911A55915275934002F1F09 /* RandomQuoteViewController.h */,
+				3911A55A15275934002F1F09 /* RandomQuoteViewController.m */,
+				3911A556152758E6002F1F09 /* RecentlyAddedQuotesViewController.h */,
+				3911A557152758E6002F1F09 /* RecentlyAddedQuotesViewController.m */,
+				3911A55315275713002F1F09 /* Top50QuotesViewController.h */,
+				3911A55415275713002F1F09 /* Top50QuotesViewController.m */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3911A50C15275485002F1F09 /* NorrisJokesApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3911A54B15275485002F1F09 /* Build configuration list for PBXNativeTarget "NorrisJokesApp" */;
+			buildPhases = (
+				3911A50915275485002F1F09 /* Sources */,
+				3911A50A15275485002F1F09 /* Frameworks */,
+				3911A50B15275485002F1F09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NorrisJokesApp;
+			productName = NorrisJokesApp;
+			productReference = 3911A50D15275485002F1F09 /* NorrisJokesApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3911A53815275485002F1F09 /* NorrisJokesAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3911A54E15275485002F1F09 /* Build configuration list for PBXNativeTarget "NorrisJokesAppTests" */;
+			buildPhases = (
+				3911A53415275485002F1F09 /* Sources */,
+				3911A53515275485002F1F09 /* Frameworks */,
+				3911A53615275485002F1F09 /* Resources */,
+				3911A53715275485002F1F09 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3911A53F15275485002F1F09 /* PBXTargetDependency */,
+			);
+			name = NorrisJokesAppTests;
+			productName = NorrisJokesAppTests;
+			productReference = 3911A53915275485002F1F09 /* NorrisJokesAppTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3911A50415275485002F1F09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 3911A50715275485002F1F09 /* Build configuration list for PBXProject "NorrisJokesApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3911A50215275485002F1F09;
+			productRefGroup = 3911A50E15275485002F1F09 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3911A50C15275485002F1F09 /* NorrisJokesApp */,
+				3911A53815275485002F1F09 /* NorrisJokesAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3911A50B15275485002F1F09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3911A51C15275485002F1F09 /* InfoPlist.strings in Resources */,
+				3911A52515275485002F1F09 /* MainStoryboard.storyboard in Resources */,
+				39F3FAB8152853A600174D6C /* data.sqlite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3911A53615275485002F1F09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3911A54515275485002F1F09 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3911A53715275485002F1F09 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3911A50915275485002F1F09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3911A51E15275485002F1F09 /* main.m in Sources */,
+				3911A52215275485002F1F09 /* AppDelegate.m in Sources */,
+				3911A52815275485002F1F09 /* FirstViewController.m in Sources */,
+				3911A52F15275485002F1F09 /* SecondViewController.m in Sources */,
+				3911A55515275713002F1F09 /* Top50QuotesViewController.m in Sources */,
+				3911A558152758E6002F1F09 /* RecentlyAddedQuotesViewController.m in Sources */,
+				3911A55B15275934002F1F09 /* RandomQuoteViewController.m in Sources */,
+				3911A55E15275A04002F1F09 /* FavouritesViewController.m in Sources */,
+				3911A56115275ACE002F1F09 /* SearchViewController.m in Sources */,
+				3911A56C15275F0C002F1F09 /* Quote.m in Sources */,
+				3911A56D15275F0C002F1F09 /* QuotesDatabaseService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3911A53415275485002F1F09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3911A54815275485002F1F09 /* NorrisJokesAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3911A53F15275485002F1F09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3911A50C15275485002F1F09 /* NorrisJokesApp */;
+			targetProxy = 3911A53E15275485002F1F09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3911A51A15275485002F1F09 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3911A51B15275485002F1F09 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3911A52315275485002F1F09 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3911A52415275485002F1F09 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		3911A54315275485002F1F09 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3911A54415275485002F1F09 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3911A54915275485002F1F09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3911A54A15275485002F1F09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3911A54C15275485002F1F09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NorrisJokesApp/NorrisJokesApp-Prefix.pch";
+				INFOPLIST_FILE = "NorrisJokesApp/NorrisJokesApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3911A54D15275485002F1F09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NorrisJokesApp/NorrisJokesApp-Prefix.pch";
+				INFOPLIST_FILE = "NorrisJokesApp/NorrisJokesApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3911A54F15275485002F1F09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NorrisJokesApp.app/NorrisJokesApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NorrisJokesApp/NorrisJokesApp-Prefix.pch";
+				INFOPLIST_FILE = "NorrisJokesAppTests/NorrisJokesAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3911A55015275485002F1F09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NorrisJokesApp.app/NorrisJokesApp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NorrisJokesApp/NorrisJokesApp-Prefix.pch";
+				INFOPLIST_FILE = "NorrisJokesAppTests/NorrisJokesAppTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3911A50715275485002F1F09 /* Build configuration list for PBXProject "NorrisJokesApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3911A54915275485002F1F09 /* Debug */,
+				3911A54A15275485002F1F09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3911A54B15275485002F1F09 /* Build configuration list for PBXNativeTarget "NorrisJokesApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3911A54C15275485002F1F09 /* Debug */,
+				3911A54D15275485002F1F09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3911A54E15275485002F1F09 /* Build configuration list for PBXNativeTarget "NorrisJokesAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3911A54F15275485002F1F09 /* Debug */,
+				3911A55015275485002F1F09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3911A50415275485002F1F09 /* Project object */;
+}

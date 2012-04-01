@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.0" toolsVersion="1938" systemVersion="10K549" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4">
+    <dependencies>
+        <development defaultVersion="4200" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
+    </dependencies>
+    <scenes>
+        <scene sceneID="GRS-TT-xMx">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0Y-8U-GYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="V2b-Ka-hcW" customClass="Top50QuotesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="76k-z3-c1Q">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="WK2-eW-bqf">
+                                <rect key="frame" x="0.0" y="42" width="320" height="369"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="iY8-H1-ggj">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="0.94025623794251678" blue="0.82249432554757607" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="V2b-Ka-hcW" id="J5I-ff-JTL"/>
+                                    <outlet property="delegate" destination="V2b-Ka-hcW" id="pT2-8v-U82"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Top 50 Quotes" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="o8N-0E-VY4">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.61734693877551017" green="0.59105683802769038" blue="0.49323350373565339" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.95741438225972986" blue="0.79895674985279397" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Top 50" id="ssB-KD-kwl"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="235" y="-419"/>
+        </scene>
+        <scene sceneID="oGL-vf-4WO">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4O6-Vu-WGL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ebZ-Tr-JFi" customClass="RandomQuoteViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mlm-wC-6EN">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Random Quote" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="FvY-xQ-z9d">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.61734693880000002" green="0.59105683799999997" blue="0.49323350370000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="yyM-2O-TGj">
+                                <rect key="frame" x="20" y="76" width="280" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215692281723022" green="0.94117653369903564" blue="0.76862752437591553" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Random Quote" id="0u2-ui-knw"/>
+                    <connections>
+                        <outlet property="random" destination="yyM-2O-TGj" id="kkP-iI-ocM"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="815" y="315"/>
+        </scene>
+        <scene sceneID="15">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="14" sceneMemberID="firstResponder"/>
+                <tabBarController id="4" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="V2b-Ka-hcW" kind="relationship" relationship="viewControllers" id="c92-kw-K9u"/>
+                        <segue destination="9Yp-Cz-Av7" kind="relationship" relationship="viewControllers" id="QD3-dK-9b6"/>
+                        <segue destination="ebZ-Tr-JFi" kind="relationship" relationship="viewControllers" id="aix-9r-mw3"/>
+                        <segue destination="f85-I2-oVQ" kind="relationship" relationship="viewControllers" id="9e6-80-rFb"/>
+                        <segue destination="QbL-7g-ybY" kind="relationship" relationship="viewControllers" id="J6U-Ui-bfL"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="132" y="180"/>
+        </scene>
+        <scene sceneID="evc-km-PVc">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dCi-Ts-RsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="QbL-7g-ybY" customClass="SearchViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="N4F-6L-CHX">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" barStyle="blackOpaque" id="did-FO-N72">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" red="0.61734693880000002" green="0.59105683799999997" blue="0.49323350370000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="QbL-7g-ybY" id="N0s-ox-h5L"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="6LX-ia-Znx">
+                                <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <color key="backgroundColor" red="0.99215692280000001" green="0.94117653369999998" blue="0.76862752440000004" alpha="1" colorSpace="deviceRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QbL-7g-ybY" id="bJ4-Mn-T2o"/>
+                            <outlet property="delegate" destination="QbL-7g-ybY" id="OWs-lz-tV0"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Search" id="pNy-gv-BvX"/>
+                    <connections>
+                        <outlet property="searchBar" destination="did-FO-N72" id="1Qc-Fm-b5C"/>
+                        <outlet property="searchDisplayController" destination="ruI-kf-URW" id="ABd-hZ-U9B"/>
+                        <outlet property="tableView" destination="N4F-6L-CHX" id="8C6-rs-SOe"/>
+                    </connections>
+                </viewController>
+                <searchDisplayController id="ruI-kf-URW">
+                    <connections>
+                        <outlet property="delegate" destination="QbL-7g-ybY" id="ih1-CY-1aP"/>
+                        <outlet property="searchBar" destination="did-FO-N72" id="rZH-Ur-3Gf"/>
+                        <outlet property="searchContentsController" destination="QbL-7g-ybY" id="eeN-B9-P8s"/>
+                        <outlet property="searchResultsDataSource" destination="QbL-7g-ybY" id="dGT-vV-Ihu"/>
+                        <outlet property="searchResultsDelegate" destination="QbL-7g-ybY" id="mFl-CT-UZT"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="93" y="831"/>
+        </scene>
+        <scene sceneID="8nb-zA-gtN">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3iS-5x-GsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="f85-I2-oVQ" customClass="FavouritesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o7B-UM-cZf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Favourites" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="BkL-Hk-c2e">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.61734693880000002" green="0.59105683799999997" blue="0.49323350370000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="0K6-1F-qfa">
+                                <rect key="frame" x="0.0" y="36" width="320" height="375"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SAE-UL-H6W">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215692280000001" green="0.94117653369999998" blue="0.76862752440000004" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Favourites" id="xia-OC-xXx"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="468" y="745"/>
+        </scene>
+        <scene sceneID="Cwa-ss-3S8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dtk-13-7Dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="9Yp-Cz-Av7" customClass="RecentlyAddedQuotesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mON-tZ-5tg">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Recently Added Quotes" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="vch-GH-8Dk">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.61734693880000002" green="0.59105683799999997" blue="0.49323350370000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="W1s-hU-Zsa">
+                                <rect key="frame" x="0.0" y="42" width="320" height="369"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="zvY-p8-fTi">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9Yp-Cz-Av7" id="ioA-oj-FDA"/>
+                                    <outlet property="delegate" destination="9Yp-Cz-Av7" id="bhC-bA-kJu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.95686280727386475" blue="0.80000007152557373" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Recently Added" id="hmG-9k-WeN"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="603" y="-260"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="FavouritesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FavouritesViewController.h"/>
+        </class>
+        <class className="RandomQuoteViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RandomQuoteViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="random" candidateClass="UITextView"/>
+            </relationships>
+        </class>
+        <class className="RecentlyAddedQuotesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RecentlyAddedQuotesViewController.h"/>
+        </class>
+        <class className="SearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBar" candidateClass="UISearchDisplayController"/>
+                <relationship kind="outlet" name="searchDisplayController" candidateClass="UISearchDisplayController"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="Top50QuotesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/Top50QuotesViewController.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
