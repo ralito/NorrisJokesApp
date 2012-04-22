@@ -8,6 +8,7 @@
 
 #import "RecentlyAddedQuotesViewController.h"
 #import "Quote.h"
+#import "QuoteDetailsViewController.h"
 
 @implementation RecentlyAddedQuotesViewController
 
@@ -34,6 +35,11 @@
 }
 
 #pragma mark - View lifecycle
+
+-(void)viewDidAppear:(BOOL)animated {
+    [self initializeTableData];
+    
+} 
 
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -84,6 +90,19 @@
     
     return cell;    
     
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"bbb");
+    QuoteDetailsViewController *quoteDetails = [self.storyboard instantiateViewControllerWithIdentifier:@"QuoteDetailsIdentifier"];
+    Quote *q1 = [[Quote alloc]initWithQuote:[tableData objectAtIndex:indexPath.row]];
+    quoteDetails.q = [[Quote alloc]initWithQuote:q1];
+    
+    NSLog(@"bbb1");
+    
+    
+    [self.navigationController pushViewController:quoteDetails animated:YES];
+    NSLog(@"bbb2");
 }
 
 @end

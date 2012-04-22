@@ -5,6 +5,21 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="933"/>
     </dependencies>
     <scenes>
+        <scene sceneID="7j2-jx-Gb7">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUJ-cp-gm3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="wEF-HJ-9Gy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Top 50 " id="aa4-yg-20c"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="AFw-cu-YbC">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="V2b-Ka-hcW" kind="relationship" relationship="rootViewController" id="zA0-wk-QjY"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-433" y="-722"/>
+        </scene>
         <scene sceneID="GRS-TT-xMx">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0Y-8U-GYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -18,11 +33,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="iY8-H1-ggj">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="iY8-H1-ggj">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -45,10 +60,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95741438225972986" blue="0.79895674985279397" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Top 50" id="ssB-KD-kwl"/>
+                    <navigationItem key="navigationItem" id="YPI-79-cje"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="235" y="-419"/>
+            <point key="canvasLocation" x="86" y="-728"/>
         </scene>
         <scene sceneID="oGL-vf-4WO">
             <objects>
@@ -67,23 +82,87 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="yyM-2O-TGj">
-                                <rect key="frame" x="20" y="76" width="280" height="183"/>
+                                <rect key="frame" x="20" y="76" width="280" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jmO-RV-gIh">
+                                <rect key="frame" x="20" y="192" width="88" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                <state key="normal" title="Add to favourites">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonPresed:" destination="ebZ-Tr-JFi" eventType="touchUpInside" id="I78-tY-Ulw"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="1" textAlignment="center" id="09q-o6-mKm">
+                                <rect key="frame" x="143" y="192" width="36" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="77L-63-faX">
+                                <rect key="frame" x="187" y="192" width="35" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                <state key="normal" title="Like">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonPresed:" destination="ebZ-Tr-JFi" eventType="touchUpInside" id="dxD-PC-sQ5"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="0" textAlignment="center" id="7VR-Cs-gHc">
+                                <rect key="frame" x="222" y="192" width="40" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Koz-Az-Rkr">
+                                <rect key="frame" x="265" y="192" width="38" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                <state key="normal" title="Dislike">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonPresed:" destination="ebZ-Tr-JFi" eventType="touchUpInside" id="3kX-bc-ClS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99215692281723022" green="0.94117653369903564" blue="0.76862752437591553" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Random Quote" id="0u2-ui-knw"/>
                     <connections>
+                        <outlet property="AddToFavouritesButton" destination="jmO-RV-gIh" id="1lM-Zc-sDV"/>
+                        <outlet property="DislikeButton" destination="Koz-Az-Rkr" id="n1I-4H-Ec3"/>
+                        <outlet property="likeButton" destination="77L-63-faX" id="ZFI-Rp-Z1z"/>
+                        <outlet property="minusVotes" destination="7VR-Cs-gHc" id="qrp-8K-9DZ"/>
+                        <outlet property="plusVotes" destination="09q-o6-mKm" id="Fer-xY-t7e"/>
                         <outlet property="random" destination="yyM-2O-TGj" id="kkP-iI-ocM"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="815" y="315"/>
+            <point key="canvasLocation" x="1075" y="180"/>
         </scene>
         <scene sceneID="15">
             <objects>
@@ -96,10 +175,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="V2b-Ka-hcW" kind="relationship" relationship="viewControllers" id="c92-kw-K9u"/>
-                        <segue destination="9Yp-Cz-Av7" kind="relationship" relationship="viewControllers" id="QD3-dK-9b6"/>
+                        <segue destination="H1k-za-5sf" kind="relationship" relationship="viewControllers" id="Ktk-t7-3bA"/>
+                        <segue destination="wEF-HJ-9Gy" kind="relationship" relationship="viewControllers" id="vqm-ut-bP6"/>
                         <segue destination="ebZ-Tr-JFi" kind="relationship" relationship="viewControllers" id="aix-9r-mw3"/>
-                        <segue destination="f85-I2-oVQ" kind="relationship" relationship="viewControllers" id="9e6-80-rFb"/>
+                        <segue destination="8vL-Yf-Hxi" kind="relationship" relationship="viewControllers" id="xF1-3V-7vi"/>
                         <segue destination="QbL-7g-ybY" kind="relationship" relationship="viewControllers" id="J6U-Ui-bfL"/>
                     </connections>
                 </tabBarController>
@@ -124,11 +203,11 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="6LX-ia-Znx">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="6LX-ia-Znx">
                                 <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -157,7 +236,22 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="93" y="831"/>
+            <point key="canvasLocation" x="163" y="911"/>
+        </scene>
+        <scene sceneID="IA3-dQ-Bu5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pie-i3-QDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="8vL-Yf-Hxi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favourites" id="83x-9n-1dN"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="jDl-k8-T4V">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="f85-I2-oVQ" kind="relationship" relationship="rootViewController" id="iTO-rF-nUu"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="687" y="911"/>
         </scene>
         <scene sceneID="8nb-zA-gtN">
             <objects>
@@ -180,24 +274,28 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SAE-UL-H6W">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SAE-UL-H6W">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="f85-I2-oVQ" id="qWe-dA-uzj"/>
+                                    <outlet property="delegate" destination="f85-I2-oVQ" id="bVA-hW-L1w"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.99215692280000001" green="0.94117653369999998" blue="0.76862752440000004" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favourites" id="xia-OC-xXx"/>
+                    <navigationItem key="navigationItem" id="Rck-qs-oEI"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="468" y="745"/>
+            <point key="canvasLocation" x="1287" y="911"/>
         </scene>
         <scene sceneID="Cwa-ss-3S8">
             <objects>
@@ -220,11 +318,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="zvY-p8-fTi">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="zvY-p8-fTi">
                                         <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -238,19 +336,156 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95686280727386475" blue="0.80000007152557373" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Recently Added" id="hmG-9k-WeN"/>
+                    <navigationItem key="navigationItem" id="v8R-qN-a49"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="603" y="-260"/>
+            <point key="canvasLocation" x="1297" y="-447"/>
+        </scene>
+        <scene sceneID="7oE-Hn-DAI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OCA-4G-qSK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="H1k-za-5sf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Recently Added" id="71w-zS-cPM"/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="bfx-Dx-BAb">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9Yp-Cz-Av7" kind="relationship" relationship="rootViewController" id="PKx-lI-q69"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="637" y="-447"/>
+        </scene>
+        <scene sceneID="6eO-6b-Zgx">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XW0-j4-YBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="QuoteDetailsIdentifier" id="mSU-nf-Ec7" customClass="QuoteDetailsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uzR-ob-kMB">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="GsQ-Yk-TaE">
+                                <rect key="frame" x="18" y="68" width="285" height="145"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Tah-Qe-C5e">
+                                <rect key="frame" x="19" y="17" width="61" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BackButton" destination="mSU-nf-Ec7" eventType="touchUpInside" id="ORC-Qi-CfD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Voe-nP-Ugs">
+                                <rect key="frame" x="262" y="221" width="38" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                <state key="normal" title="Dislike">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPresed:" destination="mSU-nf-Ec7" eventType="touchUpInside" id="DHZ-Fp-7ax"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ZA5-s4-l6G">
+                                <rect key="frame" x="183" y="221" width="35" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                <state key="normal" title="Like">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPresed:" destination="mSU-nf-Ec7" eventType="touchUpInside" id="Pna-Me-rlw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5d5-KG-Ii3">
+                                <rect key="frame" x="18" y="221" width="88" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="9"/>
+                                <state key="normal" title="Add to favourites">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPresed:" destination="mSU-nf-Ec7" eventType="touchUpInside" id="cUg-mZ-AbI"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="0" textAlignment="center" id="PeH-4a-egH">
+                                <rect key="frame" x="221" y="221" width="39" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="1" textAlignment="center" id="P28-ho-cht">
+                                <rect key="frame" x="140" y="221" width="35" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215692280000001" green="0.94117653369999998" blue="0.76862752440000004" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UM5-uy-age"/>
+                    <connections>
+                        <outlet property="FavouritesButton" destination="5d5-KG-Ii3" id="BiX-lQ-mts"/>
+                        <outlet property="MinusVotes" destination="PeH-4a-egH" id="PxW-ST-NMo"/>
+                        <outlet property="PlusVotes" destination="P28-ho-cht" id="F6f-P7-CL0"/>
+                        <outlet property="QuoteText" destination="GsQ-Yk-TaE" id="amb-ii-37b"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1693" y="180"/>
         </scene>
     </scenes>
     <classes>
         <class className="FavouritesViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FavouritesViewController.h"/>
         </class>
+        <class className="QuoteDetailsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuoteDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="BackButton"/>
+                <relationship kind="action" name="buttonPresed:"/>
+                <relationship kind="outlet" name="DislikeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="FavouritesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="LikeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="MinusVotes" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="PlusVotes" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="QuoteText" candidateClass="UITextView"/>
+            </relationships>
+        </class>
         <class className="RandomQuoteViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RandomQuoteViewController.h"/>
             <relationships>
+                <relationship kind="action" name="ButtonPresed:"/>
+                <relationship kind="outlet" name="AddToFavouritesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="DislikeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="likeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="minusVotes" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="plusVotes" candidateClass="UITextView"/>
                 <relationship kind="outlet" name="random" candidateClass="UITextView"/>
             </relationships>
         </class>

@@ -10,6 +10,7 @@
 #import "Quote.h"
 @implementation QuotesDatabaseService
 @synthesize _database;
+
 - (id)init {
     NSString *documentsDirectory = [[NSString alloc]init];
     if ((self = [super init])) {
@@ -130,7 +131,7 @@
                 NSDate *tempdateMo = [dateFormater dateFromString:str3];
                 int tempPV = atoi((char*)sqlite3_column_text(statement, 4));
                 int tempMV = atoi((char*)sqlite3_column_text(statement, 5));
-                NSLog(@"PLUSVOTES:%d",tempPV);
+                //NSLog(@"PLUSVOTES:%d",tempPV);
                 Quote *quote1 = [[Quote alloc]initWithID:temp Message:tempstr DateAdded:tempdateCr DateModified:tempdateMo PlusVotes:tempPV MinusVotes:tempMV];
                 [arr addObject:quote1];
             
@@ -162,7 +163,7 @@
             NSDate *tempdateMo = [dateFormater dateFromString:str3];
             int tempPV = atoi((char*)sqlite3_column_text(statement, 4));
             int tempMV = atoi((char*)sqlite3_column_text(statement, 5));
-            NSLog(@"Date:%@",tempdateCr);
+            //NSLog(@"Date:%@",tempdateCr);
             Quote *quote1 = [[Quote alloc]initWithID:temp Message:tempstr DateAdded:tempdateCr DateModified:tempdateMo PlusVotes:tempPV MinusVotes:tempMV];
             [arr addObject:quote1];
             
@@ -190,13 +191,13 @@
             NSString *tempstr = [[NSString alloc]initWithUTF8String:(char*)sqlite3_column_text(statement, 1)];
             
             NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
-            [dateFormater setDateFormat:@"yyyy-mm-dd"];
+            [dateFormater setDateFormat:@"yyyy-MM-dd"];
             NSDate *tempdateCr = [dateFormater dateFromString:str2];
             NSString *str3 = [[NSString alloc]initWithUTF8String:(char*)sqlite3_column_text(statement, 3)];
             NSDate *tempdateMo = [dateFormater dateFromString:str3];
             int tempPV = atoi((char*)sqlite3_column_text(statement, 4));
             int tempMV = atoi((char*)sqlite3_column_text(statement, 5));
-            NSLog(@"Date:%@",tempdateCr);
+           // NSLog(@"Date:%@",tempdateCr);
             quote1 = [[Quote alloc]initWithID:temp Message:tempstr DateAdded:tempdateCr DateModified:tempdateMo PlusVotes:tempPV MinusVotes:tempMV];
                        
         }
@@ -205,4 +206,124 @@
     return quote1;
 }
 
+-(void)updateQuote:(Quote *)q{
+    
+    sqlite3_stmt *statement = nil;
+    const char *sql =[[[NSString alloc]initWithFormat:@"select * from list where message like '%@'",q.message]UTF8String];
+    if (sqlite3_prepare_v2(_database, sql, -1, &statement, NULL)) {
+        NSAssert1(0, @"Error preparing statement", sqlite3_errmsg(_database));
+    } else {
+        int key,flag;
+        while (sqlite3_step(statement)==SQLITE_ROW) {  
+            
+            const char *sql2 =[[[NSString alloc]initWithFormat:@"UPDATE list Set PlusVotes = '%d', MinusVotes='%d',DateModified='%@' Where Message = '%@'", q.plusVotes,q.minusVotes,q.dateModified,q.message]UTF8String]; 
+            
+            if (sqlite3_prepare_v2(_database, sql2, -1, &statement, NULL)) {
+                NSAssert1(0, @"Error preparing statement", sqlite3_errmsg(_database));
+            }        
+            
+            sqlite3_bind_text(statement, 2, [q.message UTF8String], -1, SQLITE_TRANSIENT);
+            NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
+            [dateFormater setDateFormat:@"yyyy-mm-dd"];
+            NSString * dateString = [dateFormater stringFromDate:q.dateModified];
+            sqlite3_bind_text(statement, 4, [dateString UTF8String],-1, NULL);
+            sqlite3_bind_int(statement, 5, q.plusVotes);
+            sqlite3_bind_int(statement, 6, q.minusVotes);         
+            
+            if(SQLITE_DONE != sqlite3_step(statement))
+                NSAssert1(0, @"Error while inserting data. '%s'", sqlite3_errmsg(_database));
+            
+            sqlite3_reset(statement);
+            flag=1;
+
+        } 
+        
+        if (flag!=1) {
+            
+            key = sqlite3_last_insert_rowid(_database);
+            //NSLog(@"test");
+            const char *sql1 =[[[NSString alloc]initWithFormat:@"insert into list(Key, Message,DateAdded,DateModified,PlusVotes,MinusVotes) Values('%d', '%@', '%@', '%@', '%d', '%d')",key,q.message,q.dateAdded,q.dateModified,q.plusVotes,q.minusVotes]UTF8String];
+            if(sqlite3_prepare_v2(_database, sql1, -1, &statement, NULL) != SQLITE_OK)
+                NSAssert1(0, @"Error while creating add statement. '%s'", sqlite3_errmsg(_database));
+            
+            sqlite3_bind_int(statement, 1, key);
+            sqlite3_bind_text(statement, 2, [q.message UTF8String], -1, SQLITE_TRANSIENT);
+            NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
+            [dateFormater setDateFormat:@"yyyy-mm-dd"];
+            NSString * dateString = [dateFormater stringFromDate:q.dateAdded];
+            sqlite3_bind_text(statement, 3, [dateString UTF8String],-1, NULL);
+            dateString = [dateFormater stringFromDate:q.dateModified];
+            sqlite3_bind_text(statement, 4, [dateString UTF8String],-1, NULL);
+            sqlite3_bind_int(statement, 5, q.plusVotes);
+            sqlite3_bind_int(statement, 6, q.minusVotes);
+            
+            
+            if(SQLITE_DONE != sqlite3_step(statement))
+                NSAssert1(0, @"Error while inserting data. '%s'", sqlite3_errmsg(_database));
+            
+            sqlite3_reset(statement);
+
+        }    
+    }
+    
+    sqlite3_finalize(statement);
+
+    
+    
+}
+
+-(NSDate*)getDateModified{
+    NSDate *tempdateMo;
+    sqlite3_stmt *statement = nil;
+    const char *sql= "select * from list order by DateModified DESC limit 0, 1";
+    if (sqlite3_prepare_v2(_database, sql, -1, &statement, NULL)) {
+        NSAssert1(0, @"Error preparing statement", sqlite3_errmsg(_database));
+    } else {
+        while (sqlite3_step(statement)==SQLITE_ROW) {
+            NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
+            [dateFormater setDateFormat:@"yyyy-mm-dd"];
+            NSString *str3 = [[NSString alloc]initWithUTF8String:(char*)sqlite3_column_text(statement, 3)];
+            tempdateMo = [dateFormater dateFromString:str3];
+            NSLog(@"Date:%@",tempdateMo);            
+        }
+    }
+    sqlite3_finalize(statement);
+    return tempdateMo;
+}
+
+-(void)addNewQuoteWithText:(NSString *)str{
+    
+}
+
+-(void)changeQuote:(Quote *)q Votes:(int)i{
+//    NSLog(@"TEST:%d",q.key);
+//    NSDate *now = [NSDate date];    
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    dateFormatter.dateFormat = @"yyyy-MM-dd";
+//    [dateFormatter setTimeZone:[NSTimeZone systemTimeZone]];
+    int votes;
+    NSString *str;
+    if (i==1) {
+        votes = q.plusVotes;
+        str = [[NSString alloc]initWithString:@"PlusVotes"];
+    } else {
+        votes = q.minusVotes;
+        str = [[NSString alloc]initWithString:@"MinusVotes"];
+    }
+    sqlite3_stmt *statement = nil;
+    const char *sql =[[[NSString alloc]initWithFormat:@"UPDATE list Set '%@' = '%d' Where Key = '%d'",str, votes , q.key]UTF8String];
+    if (sqlite3_prepare_v2(_database, sql, -1, &statement, NULL)) {
+        NSAssert1(0, @"Error preparing statement", sqlite3_errmsg(_database));
+    } 
+    sqlite3_bind_int(statement, 1, q.plusVotes);
+    sqlite3_bind_int(statement, 2, q.key);
+   
+    if(SQLITE_DONE != sqlite3_step(statement))
+        NSAssert1(0, @"Error while updating. '%s'", sqlite3_errmsg(_database));
+    
+    sqlite3_reset(statement);
+   
+    sqlite3_finalize(statement);
+    
+}
 @end

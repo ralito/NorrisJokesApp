@@ -10,7 +10,7 @@
 
 @interface Quote : NSObject {
     
-    int ID;
+    int key;
     NSString *message;
     NSDate *dateAdded;
     NSDate *dateModified;

@@ -14,8 +14,6 @@
 		3911A51E15275485002F1F09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A51D15275485002F1F09 /* main.m */; };
 		3911A52215275485002F1F09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A52115275485002F1F09 /* AppDelegate.m */; };
 		3911A52515275485002F1F09 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3911A52315275485002F1F09 /* MainStoryboard.storyboard */; };
-		3911A52815275485002F1F09 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A52715275485002F1F09 /* FirstViewController.m */; };
-		3911A52F15275485002F1F09 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A52E15275485002F1F09 /* SecondViewController.m */; };
 		3911A53B15275485002F1F09 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A53A15275485002F1F09 /* SenTestingKit.framework */; };
 		3911A53C15275485002F1F09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A51115275485002F1F09 /* UIKit.framework */; };
 		3911A53D15275485002F1F09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A51315275485002F1F09 /* Foundation.framework */; };
@@ -29,6 +27,9 @@
 		3911A56C15275F0C002F1F09 /* Quote.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A56615275F0C002F1F09 /* Quote.m */; };
 		3911A56D15275F0C002F1F09 /* QuotesDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A56815275F0C002F1F09 /* QuotesDatabaseService.m */; };
 		3911A57015275FF4002F1F09 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A56F15275FF4002F1F09 /* libsqlite3.0.dylib */; };
+		3988F3AB154450F4007D82B1 /* Favourites.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3988F3AA154450F4007D82B1 /* Favourites.plist */; };
+		3988F3B21544858D007D82B1 /* QuoteHTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3988F3B11544858D007D82B1 /* QuoteHTTPService.m */; };
+		39CE62951542D33E00D795CE /* QuoteDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CE62941542D33E00D795CE /* QuoteDetailsViewController.m */; };
 		39F3FAB8152853A600174D6C /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 39F3FAB7152853A600174D6C /* data.sqlite */; };
 /* End PBXBuildFile section */
 
@@ -54,10 +55,6 @@
 		3911A52015275485002F1F09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3911A52115275485002F1F09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3911A52415275485002F1F09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		3911A52615275485002F1F09 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		3911A52715275485002F1F09 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		3911A52D15275485002F1F09 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		3911A52E15275485002F1F09 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		3911A53915275485002F1F09 /* NorrisJokesAppTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorrisJokesAppTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3911A53A15275485002F1F09 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		3911A54215275485002F1F09 /* NorrisJokesAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NorrisJokesAppTests-Info.plist"; sourceTree = "<group>"; };
@@ -79,6 +76,11 @@
 		3911A56715275F0C002F1F09 /* QuotesDatabaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuotesDatabaseService.h; sourceTree = "<group>"; };
 		3911A56815275F0C002F1F09 /* QuotesDatabaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesDatabaseService.m; sourceTree = "<group>"; };
 		3911A56F15275FF4002F1F09 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		3988F3AA154450F4007D82B1 /* Favourites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Favourites.plist; path = NorrisJokesApp/Favourites.plist; sourceTree = "<group>"; };
+		3988F3B01544858D007D82B1 /* QuoteHTTPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuoteHTTPService.h; path = ../../../../Desktop/NorrisJokesApp/NorrisJokesApp/QuoteHTTPService.h; sourceTree = "<group>"; };
+		3988F3B11544858D007D82B1 /* QuoteHTTPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuoteHTTPService.m; path = ../../../../Desktop/NorrisJokesApp/NorrisJokesApp/QuoteHTTPService.m; sourceTree = "<group>"; };
+		39CE62931542D33E00D795CE /* QuoteDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteDetailsViewController.h; sourceTree = "<group>"; };
+		39CE62941542D33E00D795CE /* QuoteDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteDetailsViewController.m; sourceTree = "<group>"; };
 		39F3FAB7152853A600174D6C /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,6 +114,7 @@
 			children = (
 				3911A56F15275FF4002F1F09 /* libsqlite3.0.dylib */,
 				39F3FAB7152853A600174D6C /* data.sqlite */,
+				3988F3AA154450F4007D82B1 /* Favourites.plist */,
 				3911A51715275485002F1F09 /* NorrisJokesApp */,
 				3911A54015275485002F1F09 /* NorrisJokesAppTests */,
 				3911A51015275485002F1F09 /* Frameworks */,
@@ -150,10 +153,8 @@
 				3911A56615275F0C002F1F09 /* Quote.m */,
 				3911A56715275F0C002F1F09 /* QuotesDatabaseService.h */,
 				3911A56815275F0C002F1F09 /* QuotesDatabaseService.m */,
-				3911A52615275485002F1F09 /* FirstViewController.h */,
-				3911A52715275485002F1F09 /* FirstViewController.m */,
-				3911A52D15275485002F1F09 /* SecondViewController.h */,
-				3911A52E15275485002F1F09 /* SecondViewController.m */,
+				3988F3B01544858D007D82B1 /* QuoteHTTPService.h */,
+				3988F3B11544858D007D82B1 /* QuoteHTTPService.m */,
 				3911A51815275485002F1F09 /* Supporting Files */,
 			);
 			path = NorrisJokesApp;
@@ -196,6 +197,8 @@
 				3911A56015275ACE002F1F09 /* SearchViewController.m */,
 				3911A55C15275A04002F1F09 /* FavouritesViewController.h */,
 				3911A55D15275A04002F1F09 /* FavouritesViewController.m */,
+				39CE62931542D33E00D795CE /* QuoteDetailsViewController.h */,
+				39CE62941542D33E00D795CE /* QuoteDetailsViewController.m */,
 				3911A55915275934002F1F09 /* RandomQuoteViewController.h */,
 				3911A55A15275934002F1F09 /* RandomQuoteViewController.m */,
 				3911A556152758E6002F1F09 /* RecentlyAddedQuotesViewController.h */,
@@ -279,6 +282,7 @@
 				3911A51C15275485002F1F09 /* InfoPlist.strings in Resources */,
 				3911A52515275485002F1F09 /* MainStoryboard.storyboard in Resources */,
 				39F3FAB8152853A600174D6C /* data.sqlite in Resources */,
+				3988F3AB154450F4007D82B1 /* Favourites.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,8 +319,6 @@
 			files = (
 				3911A51E15275485002F1F09 /* main.m in Sources */,
 				3911A52215275485002F1F09 /* AppDelegate.m in Sources */,
-				3911A52815275485002F1F09 /* FirstViewController.m in Sources */,
-				3911A52F15275485002F1F09 /* SecondViewController.m in Sources */,
 				3911A55515275713002F1F09 /* Top50QuotesViewController.m in Sources */,
 				3911A558152758E6002F1F09 /* RecentlyAddedQuotesViewController.m in Sources */,
 				3911A55B15275934002F1F09 /* RandomQuoteViewController.m in Sources */,
@@ -324,6 +326,8 @@
 				3911A56115275ACE002F1F09 /* SearchViewController.m in Sources */,
 				3911A56C15275F0C002F1F09 /* Quote.m in Sources */,
 				3911A56D15275F0C002F1F09 /* QuotesDatabaseService.m in Sources */,
+				39CE62951542D33E00D795CE /* QuoteDetailsViewController.m in Sources */,
+				3988F3B21544858D007D82B1 /* QuoteHTTPService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

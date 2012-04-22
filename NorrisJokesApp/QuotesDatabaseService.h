@@ -17,5 +17,9 @@
 -(NSArray*)getRecentlyAdded;
 -(NSArray*)searchByString:(NSString*)str;
 -(Quote*)getRandomQuote;
+-(void)addNewQuoteWithText:(NSString*)str;
+-(void)changeQuote:(Quote*)q Votes:(int)str;
+-(NSDate*)getDateModified;
+-(void)updateQuote:(Quote*)q;
 
 @end

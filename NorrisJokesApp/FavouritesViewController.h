@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FavouritesViewController : UIViewController
+@interface FavouritesViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>{
+   
+    NSMutableArray *arr;
+    
+}
 
 @end
