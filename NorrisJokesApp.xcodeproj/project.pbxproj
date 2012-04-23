@@ -28,7 +28,7 @@
 		3911A56D15275F0C002F1F09 /* QuotesDatabaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3911A56815275F0C002F1F09 /* QuotesDatabaseService.m */; };
 		3911A57015275FF4002F1F09 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3911A56F15275FF4002F1F09 /* libsqlite3.0.dylib */; };
 		3988F3AB154450F4007D82B1 /* Favourites.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3988F3AA154450F4007D82B1 /* Favourites.plist */; };
-		3988F3B21544858D007D82B1 /* QuoteHTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3988F3B11544858D007D82B1 /* QuoteHTTPService.m */; };
+		39A27E6C15452157005740C7 /* QuoteHTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 39A27E6B15452157005740C7 /* QuoteHTTPService.m */; };
 		39CE62951542D33E00D795CE /* QuoteDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 39CE62941542D33E00D795CE /* QuoteDetailsViewController.m */; };
 		39F3FAB8152853A600174D6C /* data.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 39F3FAB7152853A600174D6C /* data.sqlite */; };
 /* End PBXBuildFile section */
@@ -77,8 +77,8 @@
 		3911A56815275F0C002F1F09 /* QuotesDatabaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuotesDatabaseService.m; sourceTree = "<group>"; };
 		3911A56F15275FF4002F1F09 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		3988F3AA154450F4007D82B1 /* Favourites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Favourites.plist; path = NorrisJokesApp/Favourites.plist; sourceTree = "<group>"; };
-		3988F3B01544858D007D82B1 /* QuoteHTTPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuoteHTTPService.h; path = ../../../../Desktop/NorrisJokesApp/NorrisJokesApp/QuoteHTTPService.h; sourceTree = "<group>"; };
-		3988F3B11544858D007D82B1 /* QuoteHTTPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuoteHTTPService.m; path = ../../../../Desktop/NorrisJokesApp/NorrisJokesApp/QuoteHTTPService.m; sourceTree = "<group>"; };
+		39A27E6A15452157005740C7 /* QuoteHTTPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteHTTPService.h; sourceTree = "<group>"; };
+		39A27E6B15452157005740C7 /* QuoteHTTPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteHTTPService.m; sourceTree = "<group>"; };
 		39CE62931542D33E00D795CE /* QuoteDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuoteDetailsViewController.h; sourceTree = "<group>"; };
 		39CE62941542D33E00D795CE /* QuoteDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuoteDetailsViewController.m; sourceTree = "<group>"; };
 		39F3FAB7152853A600174D6C /* data.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = data.sqlite; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 				3911A56615275F0C002F1F09 /* Quote.m */,
 				3911A56715275F0C002F1F09 /* QuotesDatabaseService.h */,
 				3911A56815275F0C002F1F09 /* QuotesDatabaseService.m */,
-				3988F3B01544858D007D82B1 /* QuoteHTTPService.h */,
-				3988F3B11544858D007D82B1 /* QuoteHTTPService.m */,
+				39A27E6A15452157005740C7 /* QuoteHTTPService.h */,
+				39A27E6B15452157005740C7 /* QuoteHTTPService.m */,
 				3911A51815275485002F1F09 /* Supporting Files */,
 			);
 			path = NorrisJokesApp;
@@ -327,7 +327,7 @@
 				3911A56C15275F0C002F1F09 /* Quote.m in Sources */,
 				3911A56D15275F0C002F1F09 /* QuotesDatabaseService.m in Sources */,
 				39CE62951542D33E00D795CE /* QuoteDetailsViewController.m in Sources */,
-				3988F3B21544858D007D82B1 /* QuoteHTTPService.m in Sources */,
+				39A27E6C15452157005740C7 /* QuoteHTTPService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
