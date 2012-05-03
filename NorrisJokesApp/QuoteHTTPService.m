@@ -41,6 +41,7 @@
                         int plusVotes = [[quote objectForKey:@" plusVotes"] intValue];
                         int minusVotes = [[quote objectForKey:@" minusVotes"] intValue];
                         Quote *q = [[Quote alloc]initWithID:key Message:mes DateAdded:dateadded DateModified:datemodified PlusVotes:plusVotes MinusVotes:minusVotes];   
+                        [qdb updateQuote:q];
                         
                     }
                     

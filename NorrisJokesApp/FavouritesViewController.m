@@ -113,16 +113,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //NSLog(@"bbb");
     QuoteDetailsViewController *quoteDetails = [self.storyboard instantiateViewControllerWithIdentifier:@"QuoteDetailsIdentifier"];
     Quote *q1 = [[Quote alloc]initWithQuote:[arr objectAtIndex:indexPath.row]];
     quoteDetails.q = [[Quote alloc]initWithQuote:q1];
-    
-    //NSLog(@"bbb1");
-    
-    
-    [self.navigationController pushViewController:quoteDetails animated:YES];
-    //NSLog(@"bbb2");
+   [self.navigationController pushViewController:quoteDetails animated:YES];
 }
 
 

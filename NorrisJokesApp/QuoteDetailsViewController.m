@@ -69,10 +69,11 @@
         //        [qdb changeQuote:q Votes:2];
         //        minusVotes.text = [NSString stringWithFormat:@"%d",q.minusVotes]; 
         NSString *str = [[NSString alloc]initWithString:@"Thu Jan 12 19:32:30 EET 2012"];
+        [str stringByReplacingOccurrencesOfString:@"19:32:30 EET 2012" withString:@""];
         NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
-        [dateFormater setDateFormat:@"yyyy-MM-dd"];
+        [dateFormater setDateFormat:@""];
         NSDate *dateadded = [dateFormater dateFromString:str]; 
-        NSLog(@"%@",dateadded);
+        //NSLog(@"%@",dateadded);
     }
     
 }
@@ -103,12 +104,20 @@
 }
 */
 
+-(void)viewDidAppear:(BOOL)animated {
+    qdb = [[QuotesDatabaseService alloc]init];    
+}
+-(void)viewDidDisappear:(BOOL)animated {
+    [qdb close];
+    
+}
+
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    qdb = [[QuotesDatabaseService alloc]init];
+    //qdb = [[QuotesDatabaseService alloc]init];
     QuoteText.text = q.message;
     PlusVotes.text = [NSString stringWithFormat:@"%d",q.plusVotes];
     MinusVotes.text = [NSString stringWithFormat:@"%d",q.minusVotes];

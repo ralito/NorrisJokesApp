@@ -13,7 +13,7 @@
 @implementation RecentlyAddedQuotesViewController
 
 -(void)initializeTableData{
-    QuotesDatabaseService *qdb = [[QuotesDatabaseService alloc]init];
+    qdb = [[QuotesDatabaseService alloc]init];
     tableData = [[NSMutableArray alloc] initWithArray:[qdb getRecentlyAdded]];
 }
 
@@ -40,6 +40,10 @@
     [self initializeTableData];
     
 } 
+-(void)viewDidDisappear:(BOOL)animated {
+    [qdb close];
+    
+}
 
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -93,16 +97,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"bbb");
     QuoteDetailsViewController *quoteDetails = [self.storyboard instantiateViewControllerWithIdentifier:@"QuoteDetailsIdentifier"];
     Quote *q1 = [[Quote alloc]initWithQuote:[tableData objectAtIndex:indexPath.row]];
     quoteDetails.q = [[Quote alloc]initWithQuote:q1];
-    
-    NSLog(@"bbb1");
-    
-    
-    [self.navigationController pushViewController:quoteDetails animated:YES];
-    NSLog(@"bbb2");
+   [self.navigationController pushViewController:quoteDetails animated:YES];
 }
 
 @end

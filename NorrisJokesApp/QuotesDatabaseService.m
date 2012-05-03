@@ -40,13 +40,17 @@
     // Open the database. The database was prepared outside the application.
     if (sqlite3_open([path UTF8String], &_database) == SQLITE_OK) {
         
-        NSLog(@"Database Successfully Opened");
+       // NSLog(@"Database Successfully Opened");
         
     } else {
         NSLog(@"Error in opening database");
     }
     
     return self;
+}
+-(void)close{
+//    NSLog(@"CLOSE");
+    sqlite3_close(_database);
 }
 
 //-(void)getMostViewed{

@@ -113,6 +113,10 @@
     
 }
 
+-(void)viewDidDisappear:(BOOL)animated {
+    [qdb close];
+    
+}
 /*
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView

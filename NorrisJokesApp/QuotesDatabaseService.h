@@ -13,6 +13,7 @@
     sqlite3 *_database;
 }
 @property (atomic, assign)sqlite3 *_database;
+-(void)close;
 -(NSArray*)getTopQuotes;
 -(NSArray*)getRecentlyAdded;
 -(NSArray*)searchByString:(NSString*)str;

@@ -12,6 +12,7 @@
 
 @interface Top50QuotesViewController: UIViewController <UITableViewDataSource, UITableViewDelegate> {
     NSMutableArray *tableData;
+    QuotesDatabaseService *qdb;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
