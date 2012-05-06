@@ -34,10 +34,9 @@
                         //Add to database
                         int key= [[quote objectForKey:@"key"] intValue];
                         NSString *mes = [[NSString alloc]initWithString:[quote objectForKey:@"message"]];
-                        NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
-                        [dateFormater setDateFormat:@"yyyy-mm-dd"];
-                        NSDate *dateadded = [dateFormater dateFromString:[quote objectForKey:@"dateCreated"]]; 
-                        NSDate *datemodified = [dateFormater dateFromString:[quote objectForKey:@"dateModified"]];
+                        
+                        NSDate *dateadded = [self convertDateFromString:[quote objectForKey:@"dateAdded"]];                        
+                        NSDate *datemodified = [self convertDateFromString:[quote objectForKey:@"dateModified"]];
                         int plusVotes = [[quote objectForKey:@" plusVotes"] intValue];
                         int minusVotes = [[quote objectForKey:@" minusVotes"] intValue];
                         Quote *q = [[Quote alloc]initWithID:key Message:mes DateAdded:dateadded DateModified:datemodified PlusVotes:plusVotes MinusVotes:minusVotes];   
@@ -101,6 +100,30 @@
     
     
 
+}
+
+
+-(NSDate*)convertDateFromString:(NSString*)str{
+    int flag=0;
+    for (int i=0; i<=[str length]; i++) {
+        if ([str characterAtIndex:i]==' '){
+            flag=i;
+            break;
+        }
+    }
+    NSString *str2 = [[NSString alloc]initWithString:[str substringFromIndex:flag++]];
+    for (int i=0; i<=[str2 length]; i++) {
+        if ([str characterAtIndex:i]=='E'){
+            flag=i;
+            break;
+        }
+    }
+    NSString *str3 = [[NSString alloc]initWithString:[str2 stringByAppendingString:[str2 substringFromIndex:flag+2]]];
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
+    [dateFormater setDateFormat:@"MMM dd HH:mm:ss yyyy"];
+    NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:+2];
+    [dateFormater setTimeZone:timeZone];
+    return [dateFormater dateFromString:str3]; 
 }
 
 

@@ -15,5 +15,6 @@
 -(NSArray*)getRecentlyAddedQuotes:(NSDate*) date;
 -(BOOL)addQuote: (NSString*) message;
 -(BOOL)addVote:(int) vote toQuote:(Quote*)quote;
+-(NSDate*)convertDateFromString:(NSString*)str;
 
 @end

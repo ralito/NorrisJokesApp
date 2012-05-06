@@ -88,6 +88,18 @@
 //        NSString *stringFromDate = [[NSString alloc]initWithString:[dateFormater stringFromDate:[qdb getDateModified]]];
 //    
        // NSLog(@"LAST STR:%@",[qdb getDateModified]);
+//        int flag=0;
+//        NSString *str = @"RALI IVANOVA";
+//        for (int i=0; i<=[str length]; i++) {
+//            NSLog(@"%d",i);
+//            if ([str characterAtIndex:i]==' '){
+//                flag=i;
+//                break;
+//            }
+//        }
+//        flag++;
+//        str = [str substringFromIndex:flag];
+//        NSLog(@"STRING:%@",str);
         
     }
     
