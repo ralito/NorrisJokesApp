@@ -56,7 +56,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self initializeTableData];
+    [self initializeTableData];
 }
 
 

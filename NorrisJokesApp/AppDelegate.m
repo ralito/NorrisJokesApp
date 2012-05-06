@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -15,6 +17,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    QuotesDatabaseService *databaseService = [[QuotesDatabaseService alloc] init];
+    QuoteHTTPService *httpService = [[QuoteHTTPService alloc] init];
+    
+    NSLog(@"%@", [databaseService getDateModified]);
+    [httpService getRecentlyAddedQuotes:[databaseService getDateModified]];
+    
+    [databaseService close];
     return YES;
 }
 							

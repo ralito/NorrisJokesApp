@@ -13,7 +13,7 @@
 
 -(NSArray*)getRecentlyAddedQuotes:(NSString*)date {
     QuotesDatabaseService *qdb = [[QuotesDatabaseService alloc]init];
-    NSURL *url = [NSURL URLWithString:[[NSString alloc]initWithFormat:@"http://127.0.0.1:8888/norrisjokesserver/mainServlet?type=GetQuotes&date='%@'",date]];
+    NSURL *url = [NSURL URLWithString:[[NSString alloc]initWithFormat:@"http://127.0.0.1:8888/norrisjokesserver/mainServlet?type=GetQuotes&date=%@",date]];
         
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     NSOperationQueue *queue = [[NSOperationQueue alloc] init];
@@ -35,7 +35,7 @@
                         int key= [[quote objectForKey:@"key"] intValue];
                         NSString *message = [[NSString alloc]initWithString:[quote objectForKey:@"message"]];
                         
-                        NSDate *dateAdded = [self convertDateFromString:[quote objectForKey:@"dateAdded"]];                        
+                        NSDate *dateAdded = [self convertDateFromString:[quote objectForKey:@"dateCreated"]];                        
                         NSDate *dateModified = [self convertDateFromString:[quote objectForKey:@"dateModified"]];
                         int plusVotes = [[quote objectForKey:@" plusVotes"] intValue];
                         int minusVotes = [[quote objectForKey:@" minusVotes"] intValue];
