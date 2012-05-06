@@ -11,7 +11,7 @@
 
 @implementation QuoteHTTPService
 
--(NSArray*)getRecentlyAddedQuotes:(NSDate *)date {
+-(NSArray*)getRecentlyAddedQuotes:(NSString*)date {
     QuotesDatabaseService *qdb = [[QuotesDatabaseService alloc]init];
     NSURL *url = [NSURL URLWithString:[[NSString alloc]initWithFormat:@"http://127.0.0.1:8888/norrisjokesserver/mainServlet?type=GetQuotes&date='%@'",date]];
         

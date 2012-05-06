@@ -65,15 +65,30 @@
         [qdb changeQuote:q Votes:1];
         PlusVotes.text = [NSString stringWithFormat:@"%d",q.plusVotes];
     } else {
-        //        q.minusVotes++;
-        //        [qdb changeQuote:q Votes:2];
-        //        minusVotes.text = [NSString stringWithFormat:@"%d",q.minusVotes]; 
-        NSString *str = [[NSString alloc]initWithString:@"Thu Jan 12 19:32:30 EET 2012"];
-        [str stringByReplacingOccurrencesOfString:@"19:32:30 EET 2012" withString:@""];
-        NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
-        [dateFormater setDateFormat:@""];
-        NSDate *dateadded = [dateFormater dateFromString:str]; 
-        //NSLog(@"%@",dateadded);
+                q.minusVotes++;
+                [qdb changeQuote:q Votes:2];
+                MinusVotes.text = [NSString stringWithFormat:@"%d",q.minusVotes]; 
+
+//        NSString *str = [[NSString alloc]initWithString:@"Thu Jan 12 19:32:30 EET 2012"];
+//        NSString *str2 = [[NSString alloc]initWithString:[str substringFromIndex:4]];
+//        str2 = [str2 substringToIndex:16];
+//        NSString *str3 = [[NSString alloc]initWithString:[str2 stringByAppendingString:[str substringFromIndex:24]]];
+//        NSLog(@"STR:%@",str3);
+//          NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
+//        [dateFormater setDateFormat:@"MMM dd HH:mm:ss yyyy"];
+//        NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:+2];
+//        [dateFormater setTimeZone:timeZone];
+//        NSDate *dateadded = [dateFormater dateFromString:str3];
+//        NSLog(@"STR:%@",str2);
+//        NSLog(@"%@",dateadded );
+        
+        //NSDateFormatter *secontdateFormater = [[NSDateFormatter alloc]init];
+//        [dateFormater setDateFormat:@"yyyy/MM/dd"];
+//        [dateFormater setFormatterBehavior:NSDateFormatterBehaviorDefault];
+//        NSString *stringFromDate = [[NSString alloc]initWithString:[dateFormater stringFromDate:[qdb getDateModified]]];
+//    
+       // NSLog(@"LAST STR:%@",[qdb getDateModified]);
+        
     }
     
 }

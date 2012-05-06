@@ -67,7 +67,7 @@
 //            NSString *str2 = [[NSString alloc]initWithUTF8String:(char*)sqlite3_column_text(statement, 2)];
 //            //[str2 stringByAppendingString:@" +0600"];
 //            NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
-//            [dateFormater setDateFormat:@"yyyy-mm-dd HH:mm:ss"];
+//            [dateFormater setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
 //            NSDate *tempdate = [dateFormater dateFromString:str2];
 //            NSString *str = [[NSString alloc]initWithString:@"abv"];
 //            [str stringByAppendingString:@"%"];
@@ -93,7 +93,7 @@
             int temp = atoi((char*)sqlite3_column_text(statement, 0));
             NSString *tempstr = [[NSString alloc]initWithUTF8String:(char*)sqlite3_column_text(statement, 1)];                
             NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
-            [dateFormater setDateFormat:@"yyyy-mm-dd"];
+            [dateFormater setDateFormat:@"yyyy-MM-dd"];
             NSDate *tempdateCr = [dateFormater dateFromString:str2];
             NSString *str3 = [[NSString alloc]initWithUTF8String:(char*)sqlite3_column_text(statement, 3)];
             NSDate *tempdateMo = [dateFormater dateFromString:str3];
@@ -129,7 +129,7 @@
                 NSString *tempstr = [[NSString alloc]initWithUTF8String:(char*)sqlite3_column_text(statement, 1)];
                 
                 NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
-                [dateFormater setDateFormat:@"yyyy-mm-dd"];
+                [dateFormater setDateFormat:@"yyyy-MM-dd"];
                 NSDate *tempdateCr = [dateFormater dateFromString:str2];
                 NSString *str3 = [[NSString alloc]initWithUTF8String:(char*)sqlite3_column_text(statement, 3)];
                 NSDate *tempdateMo = [dateFormater dateFromString:str3];
@@ -161,7 +161,7 @@
             NSString *tempstr = [[NSString alloc]initWithUTF8String:(char*)sqlite3_column_text(statement, 1)];
             
             NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
-            [dateFormater setDateFormat:@"yyyy-mm-dd"];
+            [dateFormater setDateFormat:@"yyyy-MM-dd"];
             NSDate *tempdateCr = [dateFormater dateFromString:str2];
             NSString *str3 = [[NSString alloc]initWithUTF8String:(char*)sqlite3_column_text(statement, 3)];
             NSDate *tempdateMo = [dateFormater dateFromString:str3];
@@ -228,7 +228,7 @@
             
             sqlite3_bind_text(statement, 2, [q.message UTF8String], -1, SQLITE_TRANSIENT);
             NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
-            [dateFormater setDateFormat:@"yyyy-mm-dd"];
+            [dateFormater setDateFormat:@"yyyy-MM-dd"];
             NSString * dateString = [dateFormater stringFromDate:q.dateModified];
             sqlite3_bind_text(statement, 4, [dateString UTF8String],-1, NULL);
             sqlite3_bind_int(statement, 5, q.plusVotes);
@@ -276,23 +276,28 @@
     
 }
 
--(NSDate*)getDateModified{
+-(NSString*)getDateModified{
     NSDate *tempdateMo;
     sqlite3_stmt *statement = nil;
     const char *sql= "select * from list order by DateModified DESC limit 0, 1";
     if (sqlite3_prepare_v2(_database, sql, -1, &statement, NULL)) {
         NSAssert1(0, @"Error preparing statement", sqlite3_errmsg(_database));
-    } else {
+    }else {
         while (sqlite3_step(statement)==SQLITE_ROW) {
             NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
-            [dateFormater setDateFormat:@"yyyy-mm-dd"];
+            [dateFormater setDateFormat:@"yyyy-MM-dd"];
             NSString *str3 = [[NSString alloc]initWithUTF8String:(char*)sqlite3_column_text(statement, 3)];
             tempdateMo = [dateFormater dateFromString:str3];
             NSLog(@"Date:%@",tempdateMo);            
         }
     }
     sqlite3_finalize(statement);
-    return tempdateMo;
+    NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
+    [dateFormater setDateFormat:@"yyyy/MM/dd"];
+    [dateFormater setFormatterBehavior:NSDateFormatterBehaviorDefault];
+    NSString *stringFromDate = [[NSString alloc]initWithString:[dateFormater stringFromDate:tempdateMo]];
+    
+    return stringFromDate;
 }
 
 -(void)addNewQuoteWithText:(NSString *)str{
@@ -330,4 +335,5 @@
     sqlite3_finalize(statement);
     
 }
+
 @end
