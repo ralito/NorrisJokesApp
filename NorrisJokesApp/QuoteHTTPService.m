@@ -118,14 +118,11 @@
             break;
         }
     }
-    NSString *str3 = [[NSString alloc]initWithString:[[str2 substringToIndex:flag-3] stringByAppendingString:[str2 substringFromIndex:flag+2]]];
+    NSString *str3 = [[NSString alloc]initWithString:[str2 stringByAppendingString:[str2 substringFromIndex:flag+2]]];
     NSDateFormatter *dateFormater = [[NSDateFormatter alloc]init];
     [dateFormater setDateFormat:@"MMM dd HH:mm:ss yyyy"];
     NSTimeZone *timeZone = [NSTimeZone timeZoneForSecondsFromGMT:+2];
     [dateFormater setTimeZone:timeZone];
-    NSDate *date=[dateFormater dateFromString:str3];
-    [dateFormater setDateFormat:@"yyyy-MM-dd"];
-    str3 = [dateFormater stringFromDate:date];
     return [dateFormater dateFromString:str3]; 
 }
 
