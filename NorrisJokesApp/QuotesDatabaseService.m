@@ -20,7 +20,7 @@
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         documentsDirectory = [paths objectAtIndex:0];
         NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"data.sqlite"];
-        //NSLog(@"RALICA:%@",writableDBPath);
+        NSLog(@"RALICA:%@",writableDBPath);
         [writableDBPath stringByExpandingTildeInPath];
         success = [fileManager fileExistsAtPath:writableDBPath];
         if (!success) {
