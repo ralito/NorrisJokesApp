@@ -56,7 +56,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self initializeTableData];
+    //[self initializeTableData];
 }
 
 
@@ -89,7 +89,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     Quote *q = [[Quote alloc]initWithQuote:[tableData objectAtIndex:indexPath.row]];
-    cell.textLabel.text = [NSString stringWithFormat:@"%d. %@",indexPath.row +1,[q message]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%d. %@",indexPath.row+1,[q message]];
     
     
     

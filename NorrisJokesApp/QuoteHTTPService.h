@@ -12,7 +12,7 @@
 
 @interface QuoteHTTPService : NSObject <NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
--(NSArray*)getRecentlyAddedQuotes:(NSDate*) date;
+-(NSArray*)getRecentlyAddedQuotes:(NSString*) date;
 -(BOOL)addQuote: (NSString*) message;
 -(BOOL)addVote:(int) vote toQuote:(Quote*)quote;
 -(NSDate*)convertDateFromString:(NSString*)str;

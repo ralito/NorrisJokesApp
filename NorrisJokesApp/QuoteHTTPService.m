@@ -33,13 +33,13 @@
                     for (NSDictionary *quote in deserializedArray) {
                         //Add to database
                         int key= [[quote objectForKey:@"key"] intValue];
-                        NSString *mes = [[NSString alloc]initWithString:[quote objectForKey:@"message"]];
+                        NSString *message = [[NSString alloc]initWithString:[quote objectForKey:@"message"]];
                         
-                        NSDate *dateadded = [self convertDateFromString:[quote objectForKey:@"dateAdded"]];                        
-                        NSDate *datemodified = [self convertDateFromString:[quote objectForKey:@"dateModified"]];
+                        NSDate *dateAdded = [self convertDateFromString:[quote objectForKey:@"dateAdded"]];                        
+                        NSDate *dateModified = [self convertDateFromString:[quote objectForKey:@"dateModified"]];
                         int plusVotes = [[quote objectForKey:@" plusVotes"] intValue];
                         int minusVotes = [[quote objectForKey:@" minusVotes"] intValue];
-                        Quote *q = [[Quote alloc]initWithID:key Message:mes DateAdded:dateadded DateModified:datemodified PlusVotes:plusVotes MinusVotes:minusVotes];   
+                        Quote *q = [[Quote alloc]initWithID:key Message:message DateAdded:dateAdded DateModified:dateModified PlusVotes:plusVotes MinusVotes:minusVotes];   
                         [qdb updateQuote:q];
                         
                     }

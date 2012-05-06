@@ -324,9 +324,9 @@
     if (sqlite3_prepare_v2(_database, sql, -1, &statement, NULL)) {
         NSAssert1(0, @"Error preparing statement", sqlite3_errmsg(_database));
     } 
-    sqlite3_bind_int(statement, 1, q.plusVotes);
-    sqlite3_bind_int(statement, 2, q.key);
-   
+    sqlite3_bind_text(statement,1,[str UTF8String], -1, SQLITE_TRANSIENT);
+    sqlite3_bind_int(statement, 2, votes);
+    sqlite3_bind_int(statement, 3, q.key);
     if(SQLITE_DONE != sqlite3_step(statement))
         NSAssert1(0, @"Error while updating. '%s'", sqlite3_errmsg(_database));
     
